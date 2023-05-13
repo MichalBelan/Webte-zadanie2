@@ -1,0 +1,273 @@
+@font-face {
+    font-family: mojfont;
+    src: url(font/HOLLYWOOD\ STARFIRE.ttf) format("truetype");
+}
+
+body {
+    background-color: rgb(224, 220, 217);
+    background-attachment: fixed;
+    font-family: Verdana;
+    font-size: 15px;
+}
+
+.uvod {
+    font-family: mojfont;
+    border:4px solid;
+    border-color:rgb(8, 8, 103);
+    background-color: white;
+    margin: 2%;
+    
+}
+
+h1 {
+    font-family: mojfont;
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: rgb(8, 8, 103);
+    padding: 5px;
+
+    right: 0;
+    top: 0;
+    left: 0;
+    margin-top: 0
+}
+
+h2 {
+    display: flex;
+}
+
+article {
+    text-align: justify;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+}
+
+footer {
+    font-family: mojfont;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    padding: 5px;
+    background-color: rgb(8, 8, 103);
+    text-align: center;
+    color: white;
+    font-size: 11px;
+}
+
+span {
+    font-weight: bold;
+    color: red;
+}
+
+.w1 label {
+    float: left;
+    width: 120px;
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+input {
+    margin-left: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#gopass_number {
+    visibility: hidden;
+    width: 200px;
+}
+
+#gopass:checked+#gopass_number {
+    visibility: visible;
+}
+
+#hidden_name {
+    visibility: hidden;
+}
+
+#text-1 {
+    display: block;
+}
+
+#text-2 {
+    display: none;
+}
+
+#text-3 {
+    display: none;
+}
+
+.sport {
+    margin-top: 5px;
+}
+.w4{
+    display: flex;
+    flex-wrap: wrap;
+}
+.w1{
+  flex: 1;
+}
+.meno{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.priezvisko{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.vek{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.narodenie{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.email{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.mobil{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.gopass{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.pohlavie{
+    float: left;
+    width: 162px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.meno-chyba{
+    font-size: small;
+    text-align: center;
+    color: red;
+}
+
+.priezvisko-chyba{
+    font-size: small;
+    text-align: center;
+    color: red;
+}
+.vek-chyba{
+    font-size: small;
+    text-align: center;
+    color: red; 
+}
+.narodenie-chyba{
+    font-size: small;
+    text-align: center;
+    color: red; 
+}
+.e-mail-chyba{
+    font-size: small;
+    text-align: center;
+    color: red; 
+}
+.phone-chyba{
+    font-size: small;
+    text-align: center;
+    color: red;
+}
+.vyskladaj{
+    text-align: left;
+}
+
+/* The Modal (background) */
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: rgb(8, 8, 103);
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(8, 8, 103);
+    color: white;
+  }

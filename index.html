@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="obrazok/jpg" href="obrazok/sport1.jpg">
+  <title>Formulár</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Formulár pre športovcov</h1>
+  </header>
+  <article>
+    <!--<h2>Formulár pre športovcov</h2>-->
+
+    <div class="uvod">
+      <p>
+        Ten formulár slúži na zistenie akému športu sa venujete vo voľnom čase.
+        Prosíme vás o dôkladné vyplnenie formulára,ktorý vám zaberie pár minút vášho času.
+      </p>
+    </div>
+
+
+    <form name="contactform" id="myForm" action="https://form2mail.hynix.sk/form2mail.php" method="post" enctype="multipart/form-data"
+      onsubmit="return submit_check()">
+
+      <input type="hidden" name="apikey" value="7ea193817aca6f2122e23963e53e5a24">
+
+        <input type="hidden" name="from" value="xbelanm@stuba.sk">
+        <input type="hidden" name="sender" value="Michal">
+        <input type="hidden" name="to" value="feistu02@gmail.com">
+        <input type="hidden" name="subject" value="Michal">
+        <input type="hidden" name="redirectOk" value="https://webte1.fei.stuba.sk/~xbelanm/webte_zadanie2/uspech.html">
+        <input type="hidden" name="redirectFalse" value="https://webte1.fei.stuba.sk/~xbelanm/webte_zadanie2/zlyhanie.html"">
+
+
+      <input type="text" value="Michal_Belan" id="hidden_name">
+      <input type="button" value="Zobraz" onclick="ZobrazHidden()">
+
+      <div class="w4">
+        <fieldset class="w1">
+
+          <legend>Osobné údaje</legend>
+
+          <div class="meno">
+            <label><span>*</span>Meno</label>
+            <input type="text" name="meno" id="meno" placeholder="Meno" maxlength="21">
+            <label for="meno" class="meno-chyba" id="meno-chyba"></label>
+
+          </div>
+
+          <div class="priezvisko">
+            <label><span>*</span>Priezvisko</label>
+            <input type="text" name="priezvisko" id="priezvisko" placeholder="Priezvisko" maxlength="21">
+            <label for="priezvisko" class="priezvisko-chyba" id="priezvisko-chyba"></label>
+          </div>
+
+          <div class="vek">
+            <label><span>*</span>Vek</label>
+            <input type="number" name="vek" id="vek" onchange="calc();" min="1" max="115" step="1">
+            <label for="vek" class="vek-chyba" id="vek-chyba"></label>
+          </div>
+
+          <div class="narodenie">
+            <label><span>*</span>Rok narodenia</label>
+            <input type="date" name="rok" id="rok" onchange="calc();" >
+            <label for="rok" class="narodenie-chyba" id="narodenie-chyba"></label>
+          </div>
+
+          <div class="email">
+            <label><span>*</span>E-mail</label>
+            <input type="email" placeholder="xyz@abc.com" id="e-mail" name="e-mail">
+            <label for="e-mail" class="e-mail-chyba" id="e-mail-chyba"></label>
+          </div>
+
+          <div class="mobil">
+            <label for="phone"><span>*</span>Tel.čislo</label>
+            <input type="tel" id="phone" placeholder="+421123456789" name="phone" required >
+            <label for="phone" class="phone-chyba" id="phone-chyba"></label>
+          </div>
+
+          <div class="gopass">
+            <label>Máš GoPass?</label>
+            <input type="checkbox" name="gopass" id="gopass">
+            <input type="text" name="gopass_number" id="gopass_number" placeholder="Číslo GoPass">
+          </div>
+
+          <div class="pohlavie">
+            <label>Pohlavie:</label>
+            <input type="radio" id="muz" name="pohlavie" value="muz" checked> Muž
+            <input type="radio" id="zena" name="pohlavie" value="zena"> Žena
+          </div>
+
+        </fieldset><br>
+
+        <fieldset class="w1">
+          <legend>Aké doplnky stravy používaš?</legend>
+
+
+          <input onclick="text_1();" type="radio" id="protein" name="strava" value="protein" checked> Protein<br>
+          <input onclick="text_2();" type="radio" id="kreatin" name="strava" value="kreatin"> Kreatín<br>
+          <input onclick="text_3();" type="radio" id="bcaa" name="strava" value="bcaa"> BCAA<br><br>
+
+          <div id="text-1">
+            <label>Zarábate si protein s vodou alebo mliekom?</label>
+            <input type="radio" id="voda" name="protein_vm" value="voda" checked> Voda
+            <input type="radio" id="mlieko" name="protein_vm" value="mlieko"> Mlieko
+            <br><br>
+          </div>
+
+          <div id="text-2">
+            <label>Kreatín beriete ochutený alebo neochutený?</label>
+            <input type="radio" id="ochuteny" name="kreatin_on" value="ochuteny" checked> Ochutený
+            <input type="radio" id="neochuteny" name="kreatin_on" value="neochuteny"> Neochutený
+            <br><br>
+          </div>
+
+          <div id="text-3">
+            <label>V akej forme použivate BCAA?</label>
+            <input type="radio" id="tabletkova" name="bcaa_tp" value="tabletkova" checked> Tabletkovej
+            <input type="radio" id="praskova" name="bcaa_tp" value="praskova"> Práškovej
+            <br><br>
+          </div>
+
+          <div class="vyskladaj">
+            <h4>Vyskladajte si svoj obľubený šport:</h4>
+          </div>
+
+          <div class="sport">
+            Ročné obdobie: <select name="sezona" id="sezona">
+              <option value="" selected="selected">--Vyber obdobie--</option>
+            </select>
+            <br><br>
+
+            Šport: <select name="sport" id="sport">
+              <option value="" selected="selected">--Vyber šport--</option>
+            </select>
+            <br><br>
+
+            Pomôcky: <select name="pomocky" id="pomocky">
+              <option value="" selected="selected">--Vyber pomôcky--</option>
+            </select>
+            <br><br>
+          </div>
+          <br>
+
+
+          Správa:<br>
+          <textarea cols="26" rows="9" name="sprava" placeholder="Zanechajte mi správu">
+
+            </textarea>
+
+
+        </fieldset>
+      </div>
+      <!--<input type="submit" name="submit" value="Odošli" id="send_button">-->
+
+      
+    
+      <input type="button" id="myBtn" value="Odošli" onclick="Modal_all()">
+
+      <!-- The Modal -->
+      <div id="myModal"></div>
+
+    </form>
+
+  </article><br>
+
+  <footer>
+    Michal Belan, &copy; 2022
+  </footer>
+
+  <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
